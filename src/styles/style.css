@@ -1,0 +1,611 @@
+/* GRUNDLÄGGANDE STYLING FÖR ALLA HTML-SIDOR--------------------------------------------------------*/
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background: url('../assets/grey-big.png') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.top-bar {
+    background-color: #f1de8d;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    z-index: 2;
+	position: relative;
+}
+
+#pizza {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+	z-index: 3;
+}
+
+#plate {
+	display: flex; 
+    align-items: center;  /* Centrera vertikalt */
+    justify-content: center; /* Centrera horisontellt */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f1de8d;
+	border: 4px solid #fff;
+	text-align: center;
+	font-size: 11px;
+}
+
+/* NAVIGATION */
+nav {
+    position: absolute; /* Placera ovanpå innehållet */
+    width: 100%;
+    top: 20%; /* Justera så att den ligger under logotypen */
+    text-align: center;
+	padding: 15px 0;
+    z-index: 3; /* Se till att den ligger ovanpå bilden */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+}
+
+#scrollToTop {
+    position: fixed; /* Fixera knappen på sidan */
+    bottom: 20px; /* Placera den nära botten */
+    right: 20px; /* Placera den nära högerkant */
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Göm knappen till att börja med */
+    transition: opacity 0.3s ease; /* Mjuk övergång för när knappen visas */
+	z-index: 3;
+}
+
+/* STYLING FÖR index.html------------------------------------------------------------------------------*/
+
+/* HUVUDINNEHÅLL */
+.welcome-section {
+    background: url('../assets/pizza.png') no-repeat center center/cover;
+    min-height: 100vh; /* Fyll hela skärmen */
+    display: grid;
+    grid-template-columns: 40% 60%; /* Vänster kolumn med text, höger tom */
+    align-items: center;
+    padding-left: 5%;
+    padding-top: 10px;
+    position: relative;
+}
+
+/* VÄLKOMSTTEXT I VÄNSTA KOLUMNEN */
+.welcome-text {
+    max-width: 90%;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+/* STYLING FÖR meny.html------------------------------------------------------------------------------*/
+
+/* Centrerar innehållet i PizzaRecommendation */
+.pizza-recommendation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Stil för knappen */
+.recommended-buttom {
+    background-color: white; 
+    color: black;
+    font-size: 14px;
+    padding: 2px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.recommended-buttom:hover {
+    background-color: #dcdcdc; /* Mörkare röd när man hovrar */
+}
+
+/* Stil för rekommenderad pizza-text */
+.recommended-text {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* NAVIGERING FÖR MATKATEGORIER */
+.menu-categories {
+    background-color: rgba(90, 66, 50, 0.8);
+    padding: 15px 0;
+	font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 210px;
+    z-index: 10;
+}
+
+.menu-categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+}
+
+.menu-categories ul li {
+    display: inline;
+}
+
+.menu-categories ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* HUVUDINNEHÅLL */
+.menu-container {
+	background-color: rgba(90, 66, 50, 0.8);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+	margin-top: 150px;
+}
+
+/* MENYSEKTIONER */
+.menu-section {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+	color: white;
+}
+
+.menu-section h2 {
+    color: white;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.menu-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-section ul li {
+    font-size: 18px;
+    padding: 8px 0;
+	text-align: left;
+}
+
+/* TABELLEN I MENYN */
+.menu-section table {
+    width: 100%;
+    max-width: 600px; /* Begränsa storleken */
+    margin: 0 auto; /* Centrera tabellen */
+    border-collapse: separate; /* Mellanrum mellan cellerna */
+    border-spacing: 10px; /* Tydligt avstånd mellan cellerna */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*STYLING FÖR om-oss.html-----------------------------------------------------------------------------*/
+
+/* HUVUDINNEHÅLL */
+.about-us-section {
+    background: url('grey.png') no-repeat center center/cover;
+    min-height: 100vh; 
+    display: grid;
+    grid-template-columns: 50% 50%; /* Vänster kolumnen med text, höger med video */
+    align-items: center;
+    padding-left: 5%;
+    padding-top: 10px;
+    position: relative;
+}
+
+/* TEXT I VÄNSTA KOLUMNEN */
+.about-us-text {
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 40px;
+	margin: 50px;
+    color: white;
+    text-align: left;
+}
+
+/* VIDEO MED TEXT I HÖGRA KOLUMNEN */
+.about-us-media {
+    display: grid;
+    grid-template-rows: auto auto; /* Först video, sen text */
+    justify-items: left;
+	padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+/* VIDEON */
+.about-us-media video {
+	width: 100%;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+/*STYLING FÖR hitta-hit.html-------------------------------------------------------------------------*/
+
+/* HUVUDINNEHÅLL */
+.find-us-section {
+	background: url('grey.png') no-repeat center center/cover;
+	min-height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%; /* Vänster kolumn med karta, höger med text */
+    gap: 10px; /* Mellanrum mellan kolumner */
+    align-items: center; 
+    padding: 50px;
+}
+
+/* KARTA */
+.find-us-map img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* TEXTBLOCK */
+.find-us-text {
+	color: white;
+    max-width: 100%;
+    text-align: left; 
+}
+
+.find-us-text h2 {
+    font-size: 20px; /* Mindre storlek för rubriken */
+}
+
+.foodora-info-text {
+    font-size: 14px; 
+    color: white; 
+    margin-top: 100px; /* Avstånd mellan adressen och denna text */
+	margin-bottom: 30px;
+}
+
+.foodora-info {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Loggan ska ta så mycket plats som den behöver, länken ska ta resten */
+    gap: 10px;
+    align-items: center; 
+}
+
+.pink-text {
+    color: #D60664; 
+}
+
+.foodora-info img {
+    width: 70px; /* Storlek på Foodora-loggan */
+    height: auto;
+}
+
+.foodora-info a {
+    font-size: 14px;
+    text-decoration: none;
+    color: white; 
+}
+
+/*STYLING FÖR kontakta-oss.html----------------------------------------------------------------------*/
+
+/* HUVUDINNEHÅLL */
+.contact-us-section {
+	background: url('grey.png') no-repeat center center/cover;
+	min-height: 100vh; 
+    display: grid;
+    grid-template-columns: 50% 50%; /* Vänster kolumn med formulär, höger med text */
+    align-items: center;
+    padding-left: 5%;
+    padding-top: 10px;
+    position: relative;
+	color: white;
+}
+
+.contact-form {
+    padding: 10px;
+    width: 80%; /* Anpassad bredd */
+    justify-self: center; 
+}
+
+/* Ursprunglig stil för input och textarea */
+#form input, #form textarea {
+    font-size: 14px;    
+    padding: 2px;      
+}
+
+.contact-us-text h2{
+	color: #f1de8d
+}
+
+.open-hours-text {
+	margin-top: 80px;
+}
+
+.open-hours-text h2{
+	color: #f1de8d
+}
+
+/*MINDRE SKÄRM*/
+@media (max-width: 768px) {
+
+	/*GRUNDLÄGGANDE FÖR ALLA----------------------------------------------------------------------*/
+
+	.top-bar p a {
+		color: black; /* Ändra färg på autolänkade telefonnummer */
+		text-decoration: none; /* Ta bort eventuell understrykning */
+	}
+	
+	.top-bar p a:visited {
+		color: black; /* Se till att den förblir svart även efter besök */
+	}
+
+	/* JUSTERA NAVIGERINGS PLACERING */
+    nav {
+        position: absolute;
+        top: 20%; /* Anpassa så att den ligger under loggan */
+        left: 50%;
+        transform: translateX(-50%); /* Centrerar horisontellt */
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ANPASSA MENYLÄNKAR */
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, auto); /* Håller menyn horisontell */
+        gap: 2px; 
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 0.6rem; 
+        padding: 3px; 
+    }
+
+	/*STYLING FÖR index.html----------------------------------------------------------------------*/
+
+    /* ÄNDRA LAYOUT */
+    .welcome-section {
+		grid-template-columns: 1fr;
+        display: grid;
+        grid-template-rows: auto auto 1fr; 
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 5% 0;
+        background: url('pizza-mobil.png') no-repeat center center/cover; /* Ändra bakgrundsbild för mobil */
+    }
+
+    /* CENTRERA TEXT */
+    .welcome-text {
+        max-width: 100%;
+        text-align: center;
+		justify-self: center;
+        padding: 10px;
+    }
+
+	/*STYLING FÖR meny.html-----------------------------------------------------------------------*/
+
+	#pizza-recommendation {
+		margin-top: 15px;
+		font-size: 12px;
+	}
+
+	.menu-categories {
+        display: none; /* Dölj kategorimenyn helt på mobil */
+    }
+
+	 /* ANPASSA MENYSEKTIONEN */
+	 .menu-container {
+        max-width: 90%; /* Anpassa bredden */
+        margin-top: 70px; /* Minska toppmarginalen */
+        padding: 10px;
+    }
+
+    /* TABELLEN INOM MENYN */
+    .menu-section table {
+        width: 100%;
+        border-spacing: 5px;
+    }
+
+    .menu-section th, .menu-section td {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+	/* JUSTERA RUBRIKER I SEKTIONER */
+    .menu-section h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+	
+	 /* JUSTERA TEXTSTORLEK I MENYLISTAN */
+	 .menu-section ul li {
+        font-size: 10px; 
+        padding: 2px 0;
+    }
+
+    .menu-section ul li strong {
+        font-size: 10px; /* Minska storleken för stark text */
+    }
+
+	/*STYLING FÖR om-oss.html----------------------------------------------------------------------*/
+
+	/* ÄNDRA LAYOUT */
+    .about-us-section {
+		grid-template-columns: 1fr;
+        display: grid;
+        grid-template-rows: auto auto 1fr; /* Logga, meny, innehåll */
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 5% 0;
+    }
+
+	#pizza{ display: none;}
+
+	#plate{ display: none;}
+
+    /* CENTRERA TEXT */
+    .about-us-text {
+		margin:auto;
+        max-width: 100%;
+		text-align: center;
+		justify-self: center;
+		margin-top:50px;
+    }
+
+	.about-us-media {
+		display: grid;
+		grid-template-rows: auto auto; /* Först video, sedan text */
+		justify-items: center; 
+		text-align: center; 
+		width: 100%; /* Säkerställer att den inte är mindre än nödvändigt */
+	}
+
+	.about-us-media video {
+		max-width: 100%; /* Anpassar videon till skärmen */
+		width: 90%; /* Gör videon mindre än full bredd */
+	}
+
+	.about-us-media p {
+		width: 100%; 
+		text-align: center;
+		margin-top: 10px; 
+		font-size: 12px;
+	}
+
+	/*STYLING FÖR hitta-hit.html-------------------------------------------------------------------*/
+
+	/* ÄNDRA LAYOUT */
+	.find-us-section {
+		grid-template-columns: 1fr;
+        display: grid;
+        grid-template-rows: auto auto 1fr; 
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 5% 0;
+    }
+
+	.find-us-map {
+		margin-top: 100px;
+		padding-top: 20px;
+	}
+	
+    /* CENTRERA TEXTEN */
+    .find-us-text {
+		margin:auto;
+        max-width: 100%;
+        text-align: center;
+		justify-self: center;
+    }
+
+/*STYLING FÖR kontakta-oss.html--------------------------------------------------------------------*/
+
+	.contact-us-section {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto 1fr;
+        padding-left: 0; /* Tar bort vänsterpadding för att centrera innehållet */
+        text-align: center;
+    }
+
+	.contact-info {
+        grid-row: 1; /* Placera kontaktinformationen först */
+        padding: 20px;
+        max-width: 70%;
+        margin: 0 auto;
+    }
+	
+    .contact-us-text {
+		margin-top: 70px;
+		font-size: 12px;
+    }
+
+	.contact-us-text p a {
+		color: white; /* Ändrar färgen på autolänkade telefonnummer */
+		text-decoration: none; /* Tar bort eventuell understrykning */
+	}
+	
+	.contact-us-text p a:visited {
+		color: white; /* Se till att den förblir vit även efter besök */
+	}
+
+    .open-hours-text {
+		font-size: 12px;
+		margin-top: 30px; /* Justera avstånd mellan texterna */
+    }
+
+    .contact-form {
+        grid-row: 2; /* Placera formuläret under kontaktinformationen */
+        padding: 20px;
+    }
+
+	.contact-form textarea {
+        width: 90%; 
+        max-width: 300px; /* Förhindrar att den blir för bred */
+        height: 100px;
+        margin: 0 auto;
+    }
+}
+
+/*VID UTSKRIFT*/
+@media print {
+	nav{
+		display: none;
+	}
+
+	p{
+		font-family: 'Times New Roman', Times, serif;
+	}
+}
