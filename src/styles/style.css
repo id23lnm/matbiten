@@ -422,7 +422,7 @@ nav ul li a.active {
         align-items: center;
         text-align: center;
         padding: 100px 5% 0;
-        background: url('pizza-mobil.png') no-repeat center center/cover; /* Ändra bakgrundsbild för mobil */
+        background: url('../assets/pizza-mobil.png') no-repeat center center/cover; /* Ändra bakgrundsbild för mobil */
     }
 
     /* CENTRERA TEXT */
