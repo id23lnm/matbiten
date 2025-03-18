@@ -142,7 +142,7 @@ nav ul li a.active {
 }
 
 .recommended-buttom:hover {
-    background-color: #dcdcdc; /* Mörkare röd när man hovrar */
+    background-color: #dcdcdc; 
 }
 
 /* Stil för rekommenderad pizza-text */
